@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="add_contact">Add contact</string>
+    <string name="address">Address</string>
+    <string name="app_name">ContactList</string>
+    <string name="contact_details">Contact details</string>
+    <string name="contact_list">Contact list</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="save">Save</string>
+    <style name="Base.Theme.ContactList" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textColorSecondary">@color/design_default_color_on_primary</item>
+    </style>
+    <style name="Theme.ContactList" parent="Base.Theme.ContactList"/>
+</resources>

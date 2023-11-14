@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_add
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id addContactMi
+id addressEt
+id contactsLv
+id emailEt
+id nameEt
+id phoneEt
+id sabeBt
+id toolbar
+id toolbarIn
+layout activity_contact
+layout activity_main
+layout toolbar
+menu menu_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string add_contact
+string address
+string app_name
+string contact_details
+string contact_list
+string email
+string name
+string phone
+string save
+style Base.Theme.ContactList
+style Theme.ContactList
+xml backup_rules
+xml data_extraction_rules
