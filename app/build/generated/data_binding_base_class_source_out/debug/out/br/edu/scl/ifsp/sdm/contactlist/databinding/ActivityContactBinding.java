@@ -33,20 +33,20 @@ public final class ActivityContactBinding implements ViewBinding {
   public final EditText phoneEt;
 
   @NonNull
-  public final Button sabeBt;
+  public final Button saveBt;
 
   @NonNull
   public final ToolbarBinding toolbarIn;
 
   private ActivityContactBinding(@NonNull ConstraintLayout rootView, @NonNull EditText addressEt,
       @NonNull EditText emailEt, @NonNull EditText nameEt, @NonNull EditText phoneEt,
-      @NonNull Button sabeBt, @NonNull ToolbarBinding toolbarIn) {
+      @NonNull Button saveBt, @NonNull ToolbarBinding toolbarIn) {
     this.rootView = rootView;
     this.addressEt = addressEt;
     this.emailEt = emailEt;
     this.nameEt = nameEt;
     this.phoneEt = phoneEt;
-    this.sabeBt = sabeBt;
+    this.saveBt = saveBt;
     this.toolbarIn = toolbarIn;
   }
 
@@ -101,9 +101,9 @@ public final class ActivityContactBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.sabeBt;
-      Button sabeBt = ViewBindings.findChildViewById(rootView, id);
-      if (sabeBt == null) {
+      id = R.id.saveBt;
+      Button saveBt = ViewBindings.findChildViewById(rootView, id);
+      if (saveBt == null) {
         break missingId;
       }
 
@@ -115,7 +115,7 @@ public final class ActivityContactBinding implements ViewBinding {
       ToolbarBinding binding_toolbarIn = ToolbarBinding.bind(toolbarIn);
 
       return new ActivityContactBinding((ConstraintLayout) rootView, addressEt, emailEt, nameEt,
-          phoneEt, sabeBt, binding_toolbarIn);
+          phoneEt, saveBt, binding_toolbarIn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -3177,7 +3177,7 @@ id collapseActionView
 id compress
 id confirm_button
 id constraint
-id contactsLv
+id contactsRv
 id container
 id content
 id contentPanel
@@ -3225,10 +3225,12 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editContactMi
 id edit_query
 id edit_text_id
 id elastic
 id emailEt
+id emailTv
 id embed
 id end
 id endToStart
@@ -3356,6 +3358,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id nameEt
+id nameTv
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3415,6 +3418,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id removeContactMi
 id report_drawn
 id reverseSawtooth
 id right
@@ -3423,7 +3427,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
-id sabeBt
+id saveBt
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3751,7 +3755,9 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout tile_contact
 layout toolbar
+menu context_menu_main
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -3807,6 +3813,8 @@ string character_counter_pattern
 string clear_text_end_icon_content_description
 string contact_details
 string contact_list
+string contact_removed
+string edit_contact
 string email
 string error_a11y_label
 string error_icon_content_description
@@ -3923,6 +3931,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string phone
+string remove_contact
 string save
 string search_menu_title
 string searchbar_scrolling_view_behavior
