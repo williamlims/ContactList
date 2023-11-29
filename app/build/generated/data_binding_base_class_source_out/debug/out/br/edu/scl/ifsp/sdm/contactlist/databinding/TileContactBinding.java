@@ -25,11 +25,15 @@ public final class TileContactBinding implements ViewBinding {
   @NonNull
   public final TextView nameTv;
 
+  @NonNull
+  public final TextView telefoneTv;
+
   private TileContactBinding(@NonNull LinearLayout rootView, @NonNull TextView emailTv,
-      @NonNull TextView nameTv) {
+      @NonNull TextView nameTv, @NonNull TextView telefoneTv) {
     this.rootView = rootView;
     this.emailTv = emailTv;
     this.nameTv = nameTv;
+    this.telefoneTv = telefoneTv;
   }
 
   @Override
@@ -71,7 +75,13 @@ public final class TileContactBinding implements ViewBinding {
         break missingId;
       }
 
-      return new TileContactBinding((LinearLayout) rootView, emailTv, nameTv);
+      id = R.id.telefoneTv;
+      TextView telefoneTv = ViewBindings.findChildViewById(rootView, id);
+      if (telefoneTv == null) {
+        break missingId;
+      }
+
+      return new TileContactBinding((LinearLayout) rootView, emailTv, nameTv, telefoneTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

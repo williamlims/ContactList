@@ -11,14 +11,15 @@ import br.edu.scl.ifsp.sdm.contactlist.model.Contact
 import br.edu.scl.ifsp.sdm.contactlist.view.OnContactClickListener
 
 class ContactRvAdapter(
-        private val contactList: MutableList<Contact>,
-        private val onContactClickListener: OnContactClickListener
-) :
+    private val contactList: MutableList<Contact>,
+    private val onContactClickListener: OnContactClickListener
+):
     RecyclerView.Adapter<ContactRvAdapter.ContactViewHolder>() {
-    inner class ContactViewHolder(tileContactBinding: TileContactBinding):
-        RecyclerView.ViewHolder(tileContactBinding.root){
+    inner class ContactViewHolder(tileContactBinding: TileContactBinding) :
+        RecyclerView.ViewHolder(tileContactBinding.root) {
         val nameTv: TextView = tileContactBinding.nameTv
         val emailTv: TextView = tileContactBinding.emailTv
+        val phoneTv: TextView = tileContactBinding.telefoneTv
 
         init {
             tileContactBinding.root.apply {
@@ -42,20 +43,20 @@ class ContactRvAdapter(
             }
         }
     }
-
     override fun getItemCount() = contactList.size
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        TileContactBinding.inflate(LayoutInflater.from(parent.context), parent, false).run {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)=
+        TileContactBinding.inflate(LayoutInflater.from(parent.context), parent,false).run {
             ContactViewHolder(this)
         }
-
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         contactList[position].also { contact ->
-           with (holder) {
-               nameTv.text = contact.name
-               emailTv.text = contact.email
-           }
+            with(holder){
+                nameTv.text = contact.name
+                emailTv.text = contact.email
+                phoneTv.text = contact.phone
+
+
+            }
         }
     }
 }

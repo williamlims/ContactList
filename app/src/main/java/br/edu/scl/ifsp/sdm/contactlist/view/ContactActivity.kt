@@ -3,9 +3,12 @@ package br.edu.scl.ifsp.sdm.contactlist.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.View.GONE
+
 import br.edu.scl.ifsp.sdm.contactlist.R
 import br.edu.scl.ifsp.sdm.contactlist.databinding.ActivityContactBinding
+import br.edu.scl.ifsp.sdm.contactlist.databinding.ActivityMainBinding
 import br.edu.scl.ifsp.sdm.contactlist.model.Constant.EXTRA_CONTACT
 import br.edu.scl.ifsp.sdm.contactlist.model.Constant.EXTRA_VIEW_CONTACT
 import br.edu.scl.ifsp.sdm.contactlist.model.Contact
@@ -23,9 +26,9 @@ class ContactActivity : AppCompatActivity() {
         supportActionBar?.subtitle = getString(R.string.contact_details)
 
         val receivedContact = intent.getParcelableExtra<Contact>(EXTRA_CONTACT)
-        receivedContact?.let { received ->
+        receivedContact?.let { received->
             val viewContact = intent.getBooleanExtra(EXTRA_VIEW_CONTACT, false)
-            with (acb) {
+            with(acb){
                 if (viewContact) {
                     nameEt.isEnabled = false
                     addressEt.isEnabled = false
@@ -33,6 +36,8 @@ class ContactActivity : AppCompatActivity() {
                     emailEt.isEnabled = false
                     saveBt.visibility = GONE
                 }
+            }
+            with(acb){
                 nameEt.setText(received.name)
                 addressEt.setText(received.address)
                 phoneEt.setText(received.phone)
@@ -40,16 +45,17 @@ class ContactActivity : AppCompatActivity() {
             }
         }
 
-        with(acb) {
-            saveBt.setOnClickListener {
+
+        with(acb){
+            saveBt.setOnClickListener{
                 val contact = Contact(
                     id = receivedContact?.id?:hashCode(),
                     name = nameEt.text.toString(),
                     address = addressEt.text.toString(),
                     phone = phoneEt.text.toString(),
                     email = emailEt.text.toString()
-                )
 
+                )
                 val resultIntent = Intent()
                 resultIntent.putExtra(EXTRA_CONTACT, contact)
                 setResult(RESULT_OK, resultIntent)

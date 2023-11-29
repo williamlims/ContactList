@@ -16,6 +16,7 @@ id nameTv
 id phoneEt
 id removeContactMi
 id saveBt
+id telefoneTv
 id toolbar
 id toolbarIn
 layout activity_contact
@@ -38,6 +39,7 @@ string name
 string phone
 string remove_contact
 string save
+string telefone
 style Base.Theme.ContactList
 style Theme.ContactList
 xml backup_rules
